@@ -8,4 +8,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\user\source\repos\ConsoleAppHome29.11\ConsoleAppHome29.11\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\user\source\repos\ConsoleAppHome29.11\ConsoleAppHome29.11\.editorconfig" />
+  </ItemGroup>
+
 </Project>
