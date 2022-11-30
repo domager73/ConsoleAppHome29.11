@@ -1,19 +1,26 @@
-﻿int count = 0;
-
-for (int i = 0; i <= 10; i++)
+﻿using System;
+public class Dima
 {
-    for (int j = 0; j <= 10; j++) 
+    static void Main(string[] args) 
     {
-        for (int h = 0; h <= 10; h++) 
+        int count = 0;
+        for (int i = 0; i <= 10; i++)
         {
-            for (int g = 0; g <= 10; g++) 
+            for (int j = 0; j <= 10; j++)
             {
-                if (i + j == 8 && j + h == 8 && g - h == 6 && i + g == 13) 
+                for (int h = 0; h <= 10; h++)
                 {
-                    count++;
+                    for (int g = 0; g <= 10; g++)
+                    {
+                        if (i + j == 8 && j + h == 8 && g - h == 6 && i + g == 13)
+                        {
+                            count++;
+                        }
+                    }
                 }
             }
         }
+        Console.WriteLine(count);
     }
+
 }
-Console.WriteLine(count);
