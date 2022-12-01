@@ -1,5 +1,5 @@
 ﻿int maxage = 0;
-Console.WriteLine("Введите количество проживающих в доме")
+Console.WriteLine("Введите количество проживающих в доме");
 int numPeople = int.Parse(Console.ReadLine());
 int count = 0;
 

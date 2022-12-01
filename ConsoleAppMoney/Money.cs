@@ -1,36 +1,21 @@
-﻿double count = 0, sumAll = 0, res = 0;
-int bound = 0, i = 6;
+﻿Console.Write("Ведите сумму: ");
+double num = double.Parse(Console.ReadLine());
+int prov = 0;
+int step = 0;
 
-Console.WriteLine("Введи сумму ");
-int sum = int.Parse(Console.ReadLine());
-
-if (sum == 1)
+int count = 0;
+while (num > 0)
 {
-    sumAll = 1;
-    Console.WriteLine(sumAll);
-    Console.ReadKey();
+    for (int i = 0; i <= 6; i++)
+    {
+        if (num >= Math.Pow(2, i))
+        {
+            step = i;
+        }
+
+    }
+    num = num - Math.Pow(2, step);
+    count++;
 }
-do
-{
-    if (sum < Math.Pow(2, i))
-    {
-        --i;
-        continue;
-    }
+Console.WriteLine($"Минимальное количесвтво купюр {count}");
 
-    count = sum / Math.Pow(2, i);
-    bound = (int)count;
-    sumAll += bound;
-    res = sum % Math.Pow(2, i);
-    int residue = (int)res;
-    if (residue == 1)
-    {
-        sumAll += 1;
-    }
-    sum = residue;
-    --i;
-
-} while (i != 0);
-
-Console.WriteLine(sumAll);
-Console.ReadKey();
